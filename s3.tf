@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "pipeline-terraform-s3-bucket-alanrdze" {
+resource "aws_s3_bucket" "terraform-s3-bucket-alanrdze" {
   bucket = "pipeline-terraform-s3-bucket-alanrdze"
 }
 
