@@ -65,7 +65,7 @@ resource "aws_instance" "mongodbInstance" {
   iam_instance_profile        = aws_iam_instance_profile.Ec2InstanceProfile.name
   instance_type               = "t2.micro"
   ami                         = "ami-0c803b171269e2d72"
-  user_data                   = file("userdata.sh")
+  user_data                   = file("./userdata.sh")
   key_name                    = "wiz-keypair"
   subnet_id                   = aws_subnet.terraform_public_subnet_1.id
   associate_public_ip_address = true

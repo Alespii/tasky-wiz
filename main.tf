@@ -78,7 +78,7 @@ resource "aws_iam_role_policy_attachment" "nodeWorkerAttachment4" {
 
 resource "aws_iam_role_policy" "ELBControllerIAMRole" {
   role   = aws_iam_role.workerNodeRole.id
-  policy = file("alb_controller_iam_policy.json")
+  policy = file("./alb_controller_iam_policy.json")
 }
 
 resource "aws_eks_node_group" "eks_nodegroups_tf" {
@@ -122,7 +122,7 @@ resource "aws_iam_role" "irsa" {
 resource "aws_iam_policy" "lbc" {
   name   = "lbc-tasky-terraform"
   path   = "/"
-  policy = file("/Users/alanrdz/Kubernetes/alb_controller_iam_policy.json")
+  policy = file("./Kubernetes/alb_controller_iam_policy.json")
 }
 
 resource "aws_iam_policy_attachment" "lbc_attachment" {
