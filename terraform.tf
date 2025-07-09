@@ -10,10 +10,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "tf-state-deployment-alanrdze"
-    key            = "terraform.tfstate"
-    region         = "us-east-2"  
-    }
+    bucket = "tf-state-deployment-alanrdze"
+    key    = "terraform.tfstate"
+    region = "us-east-2"
+  }
 
   required_version = ">=1.12.2"
 }

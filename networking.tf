@@ -3,7 +3,7 @@ resource "aws_vpc" "terraform_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
 
-  tags = {"Name" = "TF-VPC"}
+  tags = { "Name" = "TF-VPC" }
 
 }
 
@@ -15,7 +15,7 @@ resource "aws_subnet" "terraform_public_subnet_1" {
   tags = {
     "kubernetes.io/cluster/terraform-tasky" = "shared",
     "kubernetes.io/role/elb"                = "1",
-    "Name" = "TF-Public-Subnet1"
+    "Name"                                  = "TF-Public-Subnet1"
   }
 }
 
@@ -26,7 +26,7 @@ resource "aws_subnet" "terraform_private_subnet_1" {
   tags = {
     "kubernetes.io/cluster/terraform-tasky" = "owned",
     "kubernetes.io/role/internal-elb"       = "1",
-    "Name" = "TF-Private-Subnet2"
+    "Name"                                  = "TF-Private-Subnet2"
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_subnet" "terraform_public_subnet_2" {
   tags = {
     "kubernetes.io/cluster/terraform-tasky" = "owned",
     "kubernetes.io/role/elb"                = "1",
-    "Name" = "TF-Public-Subnet2"
+    "Name"                                  = "TF-Public-Subnet2"
   }
 }
 
@@ -48,7 +48,7 @@ resource "aws_subnet" "terraform_private_subnet_2" {
   tags = {
     "kubernetes.io/cluster/terraform-tasky" = "owned",
     "kubernetes.io/role/internal-elb"       = "1",
-    "Name" = "TF-Private-Subnet2"
+    "Name"                                  = "TF-Private-Subnet2"
   }
 }
 
