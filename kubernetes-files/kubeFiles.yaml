@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: tasky-configmap
 data:
-  MONGODB_URI: mongodb://eksUser:wiz123@100.0.104.50
+  MONGODB_URI: mongodb://eksUser:wiz123@100.0.96.229
 
 ---
 

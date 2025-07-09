@@ -4,7 +4,6 @@ provider "aws" {
   shared_credentials_files = ["/Users/alanrdz/.aws/credentials"]
 }
 
-
 resource "aws_iam_role" "EKS_role" {
   name = "terraform-eks-cluster-role"
   assume_role_policy = jsonencode({
