@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform-s3-bucket-alanrdze" {
-  bucket = "terraform-s3-bucket-alanrdze"
+  bucket = "pipeline-terraform-s3-bucket-alanrdze"
 }
 
 resource "aws_s3_bucket_public_access_block" "s3bucketpublic" {
