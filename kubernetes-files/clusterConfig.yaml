@@ -1,0 +1,26 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: tasky-cluster
+  region: us-east-2
+
+iam:
+  serviceRoleARN: arn:aws:iam::324037288864:role/EKS-Cluster-Admin
+
+vpc:
+  id: vpc-0203ed180c7199d9f
+  subnets: 
+    private:
+      us-east-1a: {id: subnet-0e956fdb5b6a745e5}
+      us-east-1b: {id: subnet-010e9495fc5cc3a6a}
+
+nodeGroups:
+  - name: NodeGroup-1
+    instanceType: t3.small
+    desiredCapacity: 1
+    privateNetworking: true
+    iam:
+      awsLoadBalancerController: true
+    #adding permissions from addon for worker node instead of having to manually add.
+    
