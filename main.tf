@@ -122,7 +122,7 @@ resource "aws_iam_role" "irsa" {
 resource "aws_iam_policy" "lbc" {
   name   = "lbc-tasky-terraform"
   path   = "/"
-  policy = file("./Kubernetes/alb_controller_iam_policy.json")
+  policy = file("./alb_controller_iam_policy.json")
 }
 
 resource "aws_iam_policy_attachment" "lbc_attachment" {
